@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-16"?>
+<nugget name="FILEMAN_V.0.0.1">
+ <CLAS CLSNAME="ZCL_FM_DATASET" VERSION="1" LANGU="E" DESCRIPT="Class that represent a single file (dataset) in application" UUID="4BBCA26F6C190093E10080008D7A026F" CATEGORY="00" EXPOSURE="2" STATE="1" RELEASE="0" AUTHOR="BRPAGOTIFA" CREATEDON="20100407" CHANGEDBY="BCUSER" CHANGEDON="20101012" CHGDANYON="00000000" CLSFINAL="X" CLSCCINCL="X" FIXPT="X" UNICODE="X" R3RELEASE="701" CLSBCCAT="00" WITH_UNIT_TESTS="X" DURATION_TYPE="0 " RISK_LEVEL="0 ">
+  <implementing CLSNAME="ZCL_FM_DATASET" REFCLSNAME="ZIF_FM_FILE" VERSION="1" EXPOSURE="2" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" RELTYPE="1"/>
+  <implementing CLSNAME="ZCL_FM_DATASET" REFCLSNAME="ZIF_FM_FILE_CONSTANTS" VERSION="1" EXPOSURE="2" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" RELTYPE="1"/>
+  <implementing CLSNAME="ZCL_FM_DATASET" REFCLSNAME="ZIF_FM_FILE_TYPES" VERSION="1" EXPOSURE="2" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" RELTYPE="1"/>
+  <publicSection>class ZCL_FM_DATASET definition
+  public
+  final
+  create public .
+
+*&quot;* public components of class ZCL_FM_DATASET
+*&quot;* do not include other source files here!!!
+public section.
+
+  interfaces ZIF_FM_FILE .
+  interfaces ZIF_FM_FILE_CONSTANTS .
+  interfaces ZIF_FM_FILE_TYPES .
+
+  methods CONSTRUCTOR
+    importing
+      value(IM_FILE_NAME) type STRING .</publicSection>
+  <protectedSection>*&quot;* protected components of class ZCL_FM_DATASET
+*&quot;* do not include other source files here!!!
+protected section.</protectedSection>
+  <privateSection>*&quot;* private components of class ZCL_FM_DATASET
+*&quot;* do not include other source files here!!!
+private section.</privateSection>
+  <localImplementation>*&quot;* local class implementation for public class
+*&quot;* use this source file for the implementation part of
+*&quot;* local helper classes</localImplementation>
+  <localTypes>*&quot;* use this source file for any type declarations (class
+*&quot;* definitions, interfaces or data types) you need for method
+*&quot;* implementation or private method&apos;s signature</localTypes>
+  <localMacros>*&quot;* use this source file for any macro definitions you need
+*&quot;* in the implementation part of the class</localMacros>
+  <interfaceMethod CLSNAME="ZCL_FM_DATASET" CPDNAME="ZIF_FM_FILE~APPEND_ROW">
+   <source>method ZIF_FM_FILE~APPEND_ROW.
+endmethod.</source>
+  </interfaceMethod>
+  <interfaceMethod CLSNAME="ZCL_FM_DATASET" CPDNAME="ZIF_FM_FILE~FILE_EXIST">
+   <source>method ZIF_FM_FILE~FILE_EXIST.
+endmethod.</source>
+  </interfaceMethod>
+  <interfaceMethod CLSNAME="ZCL_FM_DATASET" CPDNAME="ZIF_FM_FILE~OPEN">
+   <source>method ZIF_FM_FILE~OPEN.
+endmethod.</source>
+  </interfaceMethod>
+  <interfaceMethod CLSNAME="ZCL_FM_DATASET" CPDNAME="ZIF_FM_FILE~SAVE">
+   <source>method ZIF_FM_FILE~SAVE.
+   &quot;test
+endmethod.</source>
+  </interfaceMethod>
+  <method CLSNAME="ZCL_FM_DATASET" CMPNAME="CONSTRUCTOR" VERSION="1" LANGU="E" DESCRIPT="CONSTRUCTOR" EXPOSURE="2" STATE="1" EDITORDER="1 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" MTDTYPE="2" MTDDECLTYP="0" R3RELEASE="701" BCMTDCAT="00" BCMTDSYN="0">
+   <parameter CLSNAME="ZCL_FM_DATASET" CMPNAME="CONSTRUCTOR" SCONAME="IM_FILE_NAME" VERSION="1" LANGU="E" DESCRIPT="File Name (Full path)" CMPTYPE="1" MTDTYPE="2" EDITORDER="1 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" PARDECLTYP="0" PARPASSTYP="0" TYPTYPE="1" TYPE="STRING"/>
+   <source>method CONSTRUCTOR.
+  me-&gt;ZIF_FM_file~ci_v_file_name = im_file_name.
+endmethod.</source>
+  </method>
+ </CLAS>
+ <CLAS CLSNAME="ZCL_FM_LOCAL" VERSION="1" LANGU="E" DESCRIPT="Global class to handle local files" UUID="4BBF59AD42F40069E10080008D7AFA6A" CATEGORY="00" EXPOSURE="2" STATE="1" RELEASE="0" AUTHOR="BRCOUTOHU" CREATEDON="20100409" CHANGEDBY="BCUSER" CHANGEDON="20101012" CHGDANYON="00000000" CLSFINAL="X" CLSCCINCL="X" FIXPT="X" UNICODE="X" R3RELEASE="701" CLSBCCAT="00" WITH_UNIT_TESTS="X" DURATION_TYPE="0 " RISK_LEVEL="0 ">
+  <implementing CLSNAME="ZCL_FM_LOCAL" REFCLSNAME="ZIF_FM_FILE" VERSION="1" EXPOSURE="2" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" RELTYPE="1"/>
+  <implementing CLSNAME="ZCL_FM_LOCAL" REFCLSNAME="ZIF_FM_FILE_CONSTANTS" VERSION="1" EXPOSURE="2" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" RELTYPE="1"/>
+  <implementing CLSNAME="ZCL_FM_LOCAL" REFCLSNAME="ZIF_FM_FILE_TYPES" VERSION="1" EXPOSURE="2" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" RELTYPE="1"/>
+  <publicSection>class ZCL_FM_LOCAL definition
+  public
+  final
+  create public .
+
+*&quot;* public components of class ZCL_FM_LOCAL
+*&quot;* do not include other source files here!!!
+public section.
+
+  interfaces ZIF_FM_FILE .
+  interfaces ZIF_FM_FILE_CONSTANTS .
+  interfaces ZIF_FM_FILE_TYPES .
+
+  methods CONSTRUCTOR
+    importing
+      value(IM_FILE_NAME) type FILE_TABLE-FILENAME .</publicSection>
+  <protectedSection>*&quot;* protected components of class ZCL_FM_LOCAL
+*&quot;* do not include other source files here!!!
+protected section.</protectedSection>
+  <privateSection>*&quot;* private components of class ZCL_FM_LOCAL
+*&quot;* do not include other source files here!!!
+private section.</privateSection>
+  <localImplementation>*&quot;* local class implementation for public class
+*&quot;* use this source file for the implementation part of
+*&quot;* local helper classes</localImplementation>
+  <localTypes>*&quot;* use this source file for any type declarations (class
+*&quot;* definitions, interfaces or data types) you need for method
+*&quot;* implementation or private method&apos;s signature</localTypes>
+  <localMacros>*&quot;* use this source file for any macro definitions you need
+*&quot;* in the implementation part of the class</localMacros>
+  <interfaceMethod CLSNAME="ZCL_FM_LOCAL" CPDNAME="ZIF_FM_FILE~APPEND_ROW">
+   <source>method ZIF_FM_FILE~APPEND_ROW.
+  APPEND im_file_row TO zif_fm_file~ci_i_data.
+endmethod.</source>
+  </interfaceMethod>
+  <interfaceMethod CLSNAME="ZCL_FM_LOCAL" CPDNAME="ZIF_FM_FILE~FILE_EXIST">
+   <source>method ZIF_FM_FILE~FILE_EXIST.
+
+  CALL METHOD cl_gui_frontend_services=&gt;file_exist
+    EXPORTING
+      file                 = zif_fm_file~ci_v_file_name
+    RECEIVING
+      result               = re_exist
+    EXCEPTIONS
+      cntl_error           = 1
+      error_no_gui         = 2
+      wrong_parameter      = 3
+      not_supported_by_gui = 4
+      OTHERS               = 5.
+
+
+endmethod.</source>
+  </interfaceMethod>
+  <interfaceMethod CLSNAME="ZCL_FM_LOCAL" CPDNAME="ZIF_FM_FILE~OPEN">
+   <source>method ZIF_FM_FILE~OPEN.
+   DATA l_r_error TYPE REF TO cx_root.
+   DATA v_txt     TYPE string.
+
+  TRY .
+
+    CALL FUNCTION &apos;GUI_UPLOAD&apos;
+      EXPORTING
+        filename                      = Zif_fm_file~ci_v_file_name
+*     FILETYPE                      = &amp;apos;ASC&amp;apos;
+*     HAS_FIELD_SEPARATOR           = &amp;apos; &amp;apos;
+*     HEADER_LENGTH                 = 0
+*     READ_BY_LINE                  = &amp;apos;X&amp;apos;
+*     DAT_MODE                      = &amp;apos; &amp;apos;
+*     CODEPAGE                      = &amp;apos; &amp;apos;
+*     IGNORE_CERR                   = ABAP_TRUE
+*     REPLACEMENT                   = &amp;apos;#&amp;apos;
+*     CHECK_BOM                     = &amp;apos; &amp;apos;
+*     VIRUS_SCAN_PROFILE            =
+*     NO_AUTH_CHECK                 = &amp;apos; &amp;apos;
+*   IMPORTING
+*     FILELENGTH                    =
+*     HEADER                        =
+      TABLES
+        data_tab                      = Zif_fm_file~ci_i_data
+     EXCEPTIONS
+       file_open_error               = 1
+       file_read_error               = 2
+       no_batch                      = 3
+       gui_refuse_filetransfer       = 4
+       invalid_type                  = 5
+       no_authority                  = 6
+       unknown_error                 = 7
+       bad_data_format               = 8
+       header_not_allowed            = 9
+       separator_not_allowed         = 10
+       header_too_long               = 11
+       unknown_dp_error              = 12
+       access_denied                 = 13
+       dp_out_of_memory              = 14
+       disk_full                     = 15
+       dp_timeout                    = 16
+       OTHERS                        = 17
+              .
+    CASE sy-subrc.
+      WHEN 1.
+        CREATE OBJECT l_r_error TYPE cx_sy_file_open.
+        RAISE EXCEPTION TYPE cx_sy_file_open
+          EXPORTING
+*            textid =
+            previous = l_r_error
+*            filename =
+*            errorcode =
+*            errortext =
+            .
+
+*    WHEN 2.
+*      RAISE FILE_READ_ERROR.
+*    WHEN 3.
+*      RAISE NO_BATCH.
+*    WHEN 4.
+*      RAISE GUI_REFUSE_FILETRANSFER.
+      WHEN 6.
+        CREATE OBJECT l_r_error TYPE cx_sy_file_authority.
+        RAISE EXCEPTION TYPE cx_sy_file_authority
+          EXPORTING
+*          textid =
+            previous = l_r_error
+*          filename =
+            .
+*    WHEN 7.
+*      RAISE UNKNOWN_ERROR.
+*    WHEN 8.
+*      RAISE BAD_DATA_FORMAT.
+*    WHEN 12.
+*      RAISE UNKNOWN_DP_ERROR.
+*    WHEN 13.
+*      RAISE ACCESS_DENIED.
+*    WHEN 14.
+*      RAISE DP_OUT_OF_MEMORY.
+*    WHEN 16.
+*      RAISE DP_TIMEOUT.
+
+    ENDCASE.
+
+  ENDTRY.
+endmethod.</source>
+  </interfaceMethod>
+  <interfaceMethod CLSNAME="ZCL_FM_LOCAL" CPDNAME="ZIF_FM_FILE~SAVE">
+   <source>method ZIF_FM_FILE~SAVE.
+   DATA: l_r_error TYPE REF TO cx_root.
+
+  CALL FUNCTION &apos;GUI_DOWNLOAD&apos;
+    EXPORTING
+*     BIN_FILESIZE                    =
+      filename                        = Zif_fm_file~ci_v_file_name
+*     FILETYPE                        = &amp;apos;ASC&amp;apos;
+*     APPEND                          = &amp;apos; &amp;apos;
+*     WRITE_FIELD_SEPARATOR           = &amp;apos; &amp;apos;
+*     HEADER                          = &amp;apos;00&amp;apos;
+*     TRUNC_TRAILING_BLANKS           = &amp;apos; &amp;apos;
+*     WRITE_LF                        = &amp;apos;X&amp;apos;
+*     COL_SELECT                      = &amp;apos; &amp;apos;
+*     COL_SELECT_MASK                 = &amp;apos; &amp;apos;
+*     DAT_MODE                        = &amp;apos; &amp;apos;
+*     CONFIRM_OVERWRITE               = &amp;apos; &amp;apos;
+*     NO_AUTH_CHECK                   = &amp;apos; &amp;apos;
+*     CODEPAGE                        = &amp;apos; &amp;apos;
+*     IGNORE_CERR                     = ABAP_TRUE
+*     REPLACEMENT                     = &amp;apos;#&amp;apos;
+*     WRITE_BOM                       = &amp;apos; &amp;apos;
+*     TRUNC_TRAILING_BLANKS_EOL       = &amp;apos;X&amp;apos;
+*     WK1_N_FORMAT                    = &amp;apos; &amp;apos;
+*     WK1_N_SIZE                      = &amp;apos; &amp;apos;
+*     WK1_T_FORMAT                    = &amp;apos; &amp;apos;
+*     WK1_T_SIZE                      = &amp;apos; &amp;apos;
+*     WRITE_LF_AFTER_LAST_LINE        = ABAP_TRUE
+*     SHOW_TRANSFER_STATUS            = ABAP_TRUE
+*   IMPORTING
+*     FILELENGTH                      =
+    TABLES
+      data_tab                        = Zif_fm_file~ci_i_data
+*     FIELDNAMES                      =
+   EXCEPTIONS
+     file_write_error                = 1
+     no_batch                        = 2
+     gui_refuse_filetransfer         = 3
+     invalid_type                    = 4
+     no_authority                    = 5
+     unknown_error                   = 6
+     header_not_allowed              = 7
+     separator_not_allowed           = 8
+     filesize_not_allowed            = 9
+     header_too_long                 = 10
+     dp_error_create                 = 11
+     dp_error_send                   = 12
+     dp_error_write                  = 13
+     unknown_dp_error                = 14
+     access_denied                   = 15
+     dp_out_of_memory                = 16
+     disk_full                       = 17
+     dp_timeout                      = 18
+     file_not_found                  = 19
+     dataprovider_exception          = 20
+     control_flush_error             = 21
+     OTHERS                          = 22
+            .
+  CASE sy-subrc.
+    WHEN 1.
+*      RAISE EXCEPTION TYPE
+    WHEN 5.
+      CREATE OBJECT l_r_error TYPE cx_sy_file_authority.
+      RAISE EXCEPTION TYPE cx_sy_file_authority
+        EXPORTING
+*          textid =
+          previous = l_r_error
+*          filename =
+          .
+*      raise exception
+*    when  6.
+*      raise exception
+*    when  7.
+*      raise exception
+*    when  17.
+*      raise exception
+*    when others.
+*      RAISE EXCEPTION
+  ENDCASE.
+endmethod.</source>
+  </interfaceMethod>
+  <method CLSNAME="ZCL_FM_LOCAL" CMPNAME="CONSTRUCTOR" VERSION="1" LANGU="E" DESCRIPT="constructor" EXPOSURE="2" STATE="1" EDITORDER="1 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" MTDTYPE="2" MTDDECLTYP="0" R3RELEASE="701" BCMTDCAT="00" BCMTDSYN="0">
+   <parameter CLSNAME="ZCL_FM_LOCAL" CMPNAME="CONSTRUCTOR" SCONAME="IM_FILE_NAME" VERSION="1" LANGU="E" DESCRIPT="importing file name from class where it is instantiated" CMPTYPE="1" MTDTYPE="2" EDITORDER="1 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" PARDECLTYP="0" PARPASSTYP="0" TYPTYPE="1" TYPE="FILE_TABLE-FILENAME"/>
+   <source>method CONSTRUCTOR.
+me-&gt;ZIF_FM_file~ci_v_file_name = im_file_name.
+endmethod.</source>
+  </method>
+ </CLAS>
+ <INTF CLSNAME="ZIF_FM_FILE" VERSION="1" LANGU="E" DESCRIPT="Interface to handle files" UUID="DFD6759995C652F18A09000C29193550" CATEGORY="00" EXPOSURE="2" STATE="1" RELEASE="0" AUTHOR="BRCOUTOHU" CREATEDON="20100407" CHANGEDON="00000000" CHGDANYON="00000000" UNICODE="X" R3RELEASE="701">
+  <include CLSNAME="ZIF_FM_FILE" REFCLSNAME="ZIF_FM_FILE_CONSTANTS" VERSION="1" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+  <include CLSNAME="ZIF_FM_FILE" REFCLSNAME="ZIF_FM_FILE_TYPES" VERSION="1" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+  <typeUsage CLSNAME="ZIF_FM_FILE" TYPEGROUP="ABAP" VERSION="1" TPUTYPE="0" IMPLICIT="X"/>
+  <attribute CLSNAME="ZIF_FM_FILE" CMPNAME="CI_I_DATA" VERSION="1" LANGU="E" EXPOSURE="2" STATE="1" EDITORDER="2 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" ATTDECLTYP="0" ATTRDONLY="X" ATTEXPVIRT="0" TYPTYPE="4" SRCROW1="11 " SRCCOLUMN1="4 " SRCROW2="11 " SRCCOLUMN2="42 " R3RELEASE="701" TYPESRC_LENG="41 " TYPESRC="ci_i_data TYPE STANDARD TABLE OF string
+"/>
+  <attribute CLSNAME="ZIF_FM_FILE" CMPNAME="CI_V_FILE_NAME" VERSION="1" LANGU="E" DESCRIPT="Full path file name" EXPOSURE="2" STATE="1" EDITORDER="1 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" ATTDECLTYP="0" ATTEXPVIRT="0" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <method CLSNAME="ZIF_FM_FILE" CMPNAME="APPEND_ROW" VERSION="1" LANGU="E" DESCRIPT="Method to append a row to the file" EXPOSURE="2" STATE="1" EDITORDER="3 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" MTDTYPE="0" MTDDECLTYP="0" R3RELEASE="701" BCMTDCAT="00" BCMTDSYN="0">
+   <parameter CLSNAME="ZIF_FM_FILE" CMPNAME="APPEND_ROW" SCONAME="IM_FILE_ROW" VERSION="1" LANGU="E" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" PARDECLTYP="0" PARPASSTYP="1" TYPTYPE="1" TYPE="STRING"/>
+  </method>
+  <method CLSNAME="ZIF_FM_FILE" CMPNAME="FILE_EXIST" VERSION="1" LANGU="E" DESCRIPT="Checks if a File Exists" EXPOSURE="2" STATE="1" EDITORDER="4 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" MTDTYPE="0" MTDDECLTYP="0" R3RELEASE="701" BCMTDCAT="00" BCMTDSYN="0">
+   <parameter CLSNAME="ZIF_FM_FILE" CMPNAME="FILE_EXIST" SCONAME="RE_EXIST" VERSION="1" LANGU="E" DESCRIPT="If ABAP_TRUE, file exists. If not, file does not exist" CMPTYPE="1" MTDTYPE="0" EDITORDER="1 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" PARDECLTYP="3" PARPASSTYP="0" TYPTYPE="1" TYPE="ABAP_BOOL"/>
+  </method>
+  <method CLSNAME="ZIF_FM_FILE" CMPNAME="OPEN" VERSION="1" LANGU="E" DESCRIPT="method to open file" EXPOSURE="2" STATE="1" EDITORDER="1 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" R3RELEASE="701" BCMTDCAT="00" BCMTDSYN="0">
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="OPEN" SCONAME="CX_SY_FILE_OPEN" VERSION="1" LANGU="E" DESCRIPT="System Exceptions Accessing File" MTDTYPE="0" EDITORDER="1 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="OPEN" SCONAME="CX_SY_CODEPAGE_CONVERTER_INIT" VERSION="1" LANGU="E" DESCRIPT="System Exception for Code Page Converter Initialization" MTDTYPE="0" EDITORDER="2 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="OPEN" SCONAME="CX_SY_CONVERSION_CODEPAGE" VERSION="1" LANGU="E" DESCRIPT="System Exception Converting Character Set" MTDTYPE="0" EDITORDER="3 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="OPEN" SCONAME="CX_SY_FILE_AUTHORITY" VERSION="1" LANGU="E" DESCRIPT="System Exceptions Accessing File" MTDTYPE="0" EDITORDER="4 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="OPEN" SCONAME="CX_SY_FILE_CLOSE" VERSION="1" LANGU="E" DESCRIPT="System Exceptions Accessing File" MTDTYPE="0" EDITORDER="5 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+  </method>
+  <method CLSNAME="ZIF_FM_FILE" CMPNAME="SAVE" VERSION="1" LANGU="E" DESCRIPT="method to save file" EXPOSURE="2" STATE="1" EDITORDER="2 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" MTDTYPE="0" MTDDECLTYP="0" MTDNEWEXC="X" R3RELEASE="701" BCMTDCAT="00" BCMTDSYN="0">
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="SAVE" SCONAME="CX_SY_FILE_OPEN" VERSION="1" LANGU="E" DESCRIPT="System Exceptions Accessing File" MTDTYPE="0" EDITORDER="1 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="SAVE" SCONAME="CX_SY_CODEPAGE_CONVERTER_INIT" VERSION="1" LANGU="E" DESCRIPT="System Exception for Code Page Converter Initialization" MTDTYPE="0" EDITORDER="2 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="SAVE" SCONAME="CX_SY_CONVERSION_CODEPAGE" VERSION="1" LANGU="E" DESCRIPT="System Exception Converting Character Set" MTDTYPE="0" EDITORDER="3 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="SAVE" SCONAME="CX_SY_FILE_AUTHORITY" VERSION="1" LANGU="E" DESCRIPT="System Exceptions Accessing File" MTDTYPE="0" EDITORDER="4 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="SAVE" SCONAME="CX_SY_FILE_IO" VERSION="1" LANGU="E" DESCRIPT="System Exceptions Accessing File" MTDTYPE="0" EDITORDER="5 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="SAVE" SCONAME="CX_SY_FILE_OPEN_MODE" VERSION="1" LANGU="E" DESCRIPT="System Exceptions Accessing File" MTDTYPE="0" EDITORDER="6 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+   <exception CLSNAME="ZIF_FM_FILE" CMPNAME="SAVE" SCONAME="CX_SY_FILE_CLOSE" VERSION="1" LANGU="E" DESCRIPT="System Exceptions Accessing File" MTDTYPE="0" EDITORDER="7 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000"/>
+  </method>
+ </INTF>
+ <INTF CLSNAME="ZIF_FM_FILE_CONSTANTS" VERSION="1" LANGU="E" DESCRIPT="Constants for File API" UUID="DFD6759995C658F18A09000C29193550" CATEGORY="00" EXPOSURE="2" STATE="1" RELEASE="0" AUTHOR="DEVELOPER1" CREATEDON="20100930" CHANGEDON="00000000" CHGDANYON="00000000" UNICODE="X" R3RELEASE="701">
+  <attribute CLSNAME="ZIF_FM_FILE_CONSTANTS" CMPNAME="CC_FILE_EXTENSION_DAT" VERSION="1" LANGU="E" DESCRIPT="Extension DAT" EXPOSURE="2" STATE="1" EDITORDER="1 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" ATTDECLTYP="2" ATTVALUE="&apos;.DAT&apos;" ATTEXPVIRT="0" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <attribute CLSNAME="ZIF_FM_FILE_CONSTANTS" CMPNAME="CC_FILE_EXTENSION_TXT" VERSION="1" LANGU="E" DESCRIPT="Extension TXT" EXPOSURE="2" STATE="1" EDITORDER="2 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" ATTDECLTYP="2" ATTVALUE="&apos;.TXT&apos;" ATTEXPVIRT="0" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <attribute CLSNAME="ZIF_FM_FILE_CONSTANTS" CMPNAME="CC_FILE_OPEN_MODE_INPUT" VERSION="1" LANGU="E" DESCRIPT="Write (input) open mode" EXPOSURE="2" STATE="1" EDITORDER="3 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" ATTDECLTYP="2" ATTVALUE="&apos;INPUT&apos;" ATTEXPVIRT="0" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <attribute CLSNAME="ZIF_FM_FILE_CONSTANTS" CMPNAME="CC_FILE_OPEN_MODE_OUTPUT" VERSION="1" LANGU="E" DESCRIPT="Read (output) open mode" EXPOSURE="2" STATE="1" EDITORDER="4 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" ATTDECLTYP="2" ATTVALUE="&apos;OUTPUT&apos;" ATTEXPVIRT="0" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <attribute CLSNAME="ZIF_FM_FILE_CONSTANTS" CMPNAME="CC_FILE_TYPE_DATASET" VERSION="1" LANGU="E" EXPOSURE="2" STATE="1" EDITORDER="5 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" ATTDECLTYP="2" ATTVALUE="&apos;DATASET&apos;" ATTEXPVIRT="0" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <attribute CLSNAME="ZIF_FM_FILE_CONSTANTS" CMPNAME="CC_FILE_TYPE_LOCAL" VERSION="1" LANGU="E" EXPOSURE="2" STATE="1" EDITORDER="6 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" ATTDECLTYP="2" ATTVALUE="&apos;LOCAL&apos;" ATTEXPVIRT="0" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+ </INTF>
+ <INTF CLSNAME="ZIF_FM_FILE_TYPES" VERSION="1" LANGU="E" DESCRIPT="Types for File API" UUID="DFD6759995C65EF18A09000C29193550" CATEGORY="00" EXPOSURE="2" STATE="1" RELEASE="0" AUTHOR="BRPAGOTIFA" CREATEDON="20100412" CHANGEDON="00000000" CHGDANYON="00000000" UNICODE="X" R3RELEASE="701">
+  <types CLSNAME="ZIF_FM_FILE_TYPES" CMPNAME="CTY_FILE_EXTENSION" VERSION="1" LANGU="E" DESCRIPT="File extension" EXPOSURE="2" STATE="1" EDITORDER="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <types CLSNAME="ZIF_FM_FILE_TYPES" CMPNAME="CTY_FILE_NAME" VERSION="1" LANGU="E" DESCRIPT="File Name" EXPOSURE="2" STATE="1" EDITORDER="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <types CLSNAME="ZIF_FM_FILE_TYPES" CMPNAME="CTY_FILE_OPEN_MODE" VERSION="1" LANGU="E" DESCRIPT="File Open Mode" EXPOSURE="2" STATE="1" EDITORDER="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <types CLSNAME="ZIF_FM_FILE_TYPES" CMPNAME="CTY_FILE_PATH" VERSION="1" LANGU="E" DESCRIPT="File Path" EXPOSURE="2" STATE="1" EDITORDER="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <types CLSNAME="ZIF_FM_FILE_TYPES" CMPNAME="CTY_FILE_ROW" VERSION="1" LANGU="E" DESCRIPT="File Row" EXPOSURE="2" STATE="1" EDITORDER="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+  <types CLSNAME="ZIF_FM_FILE_TYPES" CMPNAME="CTY_FILE_TYPE" VERSION="1" LANGU="E" DESCRIPT='File Type: &quot;LOCAL&quot; or &quot;DATASET&quot;' EXPOSURE="2" STATE="1" EDITORDER="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDON="00000000" TYPTYPE="1" TYPE="STRING" SRCROW1="0 " SRCCOLUMN1="0 " SRCROW2="0 " SRCCOLUMN2="0 " R3RELEASE="701" TYPESRC_LENG="0 "/>
+ </INTF>
+ <PROG NAME="ZPFM_DEMO1" VARCL="X" SUBC="1" CNAM="DEVELOPER1" CDAT="20101001" UNAM="BCUSER" UDAT="20101012" VERN="000008" RMAND="800" RLOAD="E" FIXPT="X" SDATE="20101012" STIME="235800" IDATE="20101012" ITIME="235800" UCCHECK="X">
+  <textPool>
+   <language SPRAS="E">
+    <textElement ID="I" KEY="OPT" ENTRY="File options" LENGTH="12 "/>
+    <textElement ID="I" KEY="SUC" ENTRY="File saved." LENGTH="11 "/>
+    <textElement ID="S" KEY="FILENAME" ENTRY="        File Name:" LENGTH="18 "/>
+   </language>
+  </textPool>
+  <source>*&amp;---------------------------------------------------------------------*
+*&amp; Report  ZPFM_DEMO1
+*&amp;
+*&amp;---------------------------------------------------------------------*
+*&amp;
+*&amp;
+*&amp;---------------------------------------------------------------------*
+
+REPORT  zpfm_demo1.
+
+DATA retfiletable TYPE filetable.
+DATA retrc TYPE sysubrc.
+DATA retuseraction TYPE i.
+
+DATA: r_file TYPE REF TO zcl_fm_local.
+
+SELECTION-SCREEN BEGIN OF BLOCK opt WITH FRAME TITLE text-opt.
+PARAMETERS filename LOWER CASE TYPE file_table-filename MODIF ID did.
+SELECTION-SCREEN END OF BLOCK opt.
+
+
+AT SELECTION-SCREEN ON VALUE-REQUEST FOR filename.
+  CALL METHOD cl_gui_frontend_services=&gt;file_open_dialog
+    EXPORTING
+      multiselection    = abap_false
+      file_filter       = &apos;*.txt&apos;
+      default_extension = &apos;txt&apos;
+    CHANGING
+      file_table        = retfiletable
+      rc                = retrc
+      user_action       = retuseraction.
+  READ TABLE retfiletable INTO filename INDEX 1.
+
+START-OF-SELECTION.
+
+  CREATE OBJECT r_file
+    EXPORTING
+      im_file_name = filename.
+
+  CALL METHOD r_file-&gt;zif_fm_file~append_row
+    EXPORTING
+      im_file_row = &apos;Test line 1&apos;.
+
+  CALL METHOD r_file-&gt;zif_fm_file~append_row
+    EXPORTING
+      im_file_row = &apos;Test line 2&apos;.
+
+  TRY.
+      CALL METHOD r_file-&gt;zif_fm_file~save.
+    CATCH cx_sy_file_open .
+    CATCH cx_sy_codepage_converter_init .
+    CATCH cx_sy_conversion_codepage .
+    CATCH cx_sy_file_authority .
+    CATCH cx_sy_file_io .
+    CATCH cx_sy_file_open_mode .
+    CATCH cx_sy_file_close .
+  ENDTRY.
+
+  MESSAGE &apos;File saved.&apos;(suc) TYPE &apos;S&apos;.</source>
+ </PROG>
+</nugget>
