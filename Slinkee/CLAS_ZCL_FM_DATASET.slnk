@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-16"?>
+<CLAS CLSNAME="ZCL_FM_DATASET" VERSION="1" LANGU="E" DESCRIPT="Class that represent a single file (dataset) in application" UUID="4BBCA26F6C190093E10080008D7A026F" CATEGORY="00" EXPOSURE="2" STATE="1" RELEASE="0" AUTHOR="BRPAGOTIFA" CREATEDON="20100407" CHANGEDBY="BCUSER" CHANGEDON="20101012" CHGDANYON="00000000" CLSFINAL="X" CLSCCINCL="X" FIXPT="X" UNICODE="X" R3RELEASE="701" CLSBCCAT="00" WITH_UNIT_TESTS="X" DURATION_TYPE="0 " RISK_LEVEL="0 ">
+ <implementing CLSNAME="ZCL_FM_DATASET" REFCLSNAME="ZIF_FM_FILE" VERSION="1" EXPOSURE="2" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" RELTYPE="1"/>
+ <implementing CLSNAME="ZCL_FM_DATASET" REFCLSNAME="ZIF_FM_FILE_CONSTANTS" VERSION="1" EXPOSURE="2" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" RELTYPE="1"/>
+ <implementing CLSNAME="ZCL_FM_DATASET" REFCLSNAME="ZIF_FM_FILE_TYPES" VERSION="1" EXPOSURE="2" STATE="1" AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" RELTYPE="1"/>
+ <publicSection>class ZCL_FM_DATASET definition
+  public
+  final
+  create public .
+
+*&quot;* public components of class ZCL_FM_DATASET
+*&quot;* do not include other source files here!!!
+public section.
+
+  interfaces ZIF_FM_FILE .
+  interfaces ZIF_FM_FILE_CONSTANTS .
+  interfaces ZIF_FM_FILE_TYPES .
+
+  methods CONSTRUCTOR
+    importing
+      value(IM_FILE_NAME) type STRING .</publicSection>
+ <protectedSection>*&quot;* protected components of class ZCL_FM_DATASET
+*&quot;* do not include other source files here!!!
+protected section.</protectedSection>
+ <privateSection>*&quot;* private components of class ZCL_FM_DATASET
+*&quot;* do not include other source files here!!!
+private section.</privateSection>
+ <localImplementation>*&quot;* local class implementation for public class
+*&quot;* use this source file for the implementation part of
+*&quot;* local helper classes</localImplementation>
+ <localTypes>*&quot;* use this source file for any type declarations (class
+*&quot;* definitions, interfaces or data types) you need for method
+*&quot;* implementation or private method&apos;s signature</localTypes>
+ <localMacros>*&quot;* use this source file for any macro definitions you need
+*&quot;* in the implementation part of the class</localMacros>
+ <interfaceMethod CLSNAME="ZCL_FM_DATASET" CPDNAME="ZIF_FM_FILE~APPEND_ROW">
+  <source>method ZIF_FM_FILE~APPEND_ROW.
+endmethod.</source>
+ </interfaceMethod>
+ <interfaceMethod CLSNAME="ZCL_FM_DATASET" CPDNAME="ZIF_FM_FILE~FILE_EXIST">
+  <source>method ZIF_FM_FILE~FILE_EXIST.
+endmethod.</source>
+ </interfaceMethod>
+ <interfaceMethod CLSNAME="ZCL_FM_DATASET" CPDNAME="ZIF_FM_FILE~OPEN">
+  <source>method ZIF_FM_FILE~OPEN.
+endmethod.</source>
+ </interfaceMethod>
+ <interfaceMethod CLSNAME="ZCL_FM_DATASET" CPDNAME="ZIF_FM_FILE~SAVE">
+  <source>method ZIF_FM_FILE~SAVE.
+   &quot;test
+endmethod.</source>
+ </interfaceMethod>
+ <method CLSNAME="ZCL_FM_DATASET" CMPNAME="CONSTRUCTOR" VERSION="1" LANGU="E" DESCRIPT="CONSTRUCTOR" EXPOSURE="2" STATE="1" EDITORDER="1 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" MTDTYPE="2" MTDDECLTYP="0" R3RELEASE="701" BCMTDCAT="00" BCMTDSYN="0">
+  <parameter CLSNAME="ZCL_FM_DATASET" CMPNAME="CONSTRUCTOR" SCONAME="IM_FILE_NAME" VERSION="1" LANGU="E" DESCRIPT="File Name (Full path)" CMPTYPE="1" MTDTYPE="2" EDITORDER="1 " DISPID="0 " AUTHOR="BCUSER" CREATEDON="20101012" CHANGEDBY="BCUSER" CHANGEDON="20101012" PARDECLTYP="0" PARPASSTYP="0" TYPTYPE="1" TYPE="STRING"/>
+  <source>method CONSTRUCTOR.
+  me-&gt;ZIF_FM_file~ci_v_file_name = im_file_name.
+endmethod.</source>
+ </method>
+</CLAS>

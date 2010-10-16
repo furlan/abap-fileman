@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-16"?>
+<PROG NAME="ZPFM_DEMO1" VARCL="X" SUBC="1" CNAM="DEVELOPER1" CDAT="20101001" UNAM="BCUSER" UDAT="20101012" VERN="000008" RMAND="800" RLOAD="E" FIXPT="X" SDATE="20101012" STIME="235800" IDATE="20101012" ITIME="235800" UCCHECK="X">
+ <textPool>
+  <language SPRAS="E">
+   <textElement ID="I" KEY="OPT" ENTRY="File options" LENGTH="12 "/>
+   <textElement ID="I" KEY="SUC" ENTRY="File saved." LENGTH="11 "/>
+   <textElement ID="S" KEY="FILENAME" ENTRY="        File Name:" LENGTH="18 "/>
+  </language>
+ </textPool>
+ <source>*&amp;---------------------------------------------------------------------*
+*&amp; Report  ZPFM_DEMO1
+*&amp;
+*&amp;---------------------------------------------------------------------*
+*&amp;
+*&amp;
+*&amp;---------------------------------------------------------------------*
+
+REPORT  zpfm_demo1.
+
+DATA retfiletable TYPE filetable.
+DATA retrc TYPE sysubrc.
+DATA retuseraction TYPE i.
+
+DATA: r_file TYPE REF TO zcl_fm_local.
+
+SELECTION-SCREEN BEGIN OF BLOCK opt WITH FRAME TITLE text-opt.
+PARAMETERS filename LOWER CASE TYPE file_table-filename MODIF ID did.
+SELECTION-SCREEN END OF BLOCK opt.
+
+
+AT SELECTION-SCREEN ON VALUE-REQUEST FOR filename.
+  CALL METHOD cl_gui_frontend_services=&gt;file_open_dialog
+    EXPORTING
+      multiselection    = abap_false
+      file_filter       = &apos;*.txt&apos;
+      default_extension = &apos;txt&apos;
+    CHANGING
+      file_table        = retfiletable
+      rc                = retrc
+      user_action       = retuseraction.
+  READ TABLE retfiletable INTO filename INDEX 1.
+
+START-OF-SELECTION.
+
+  CREATE OBJECT r_file
+    EXPORTING
+      im_file_name = filename.
+
+  CALL METHOD r_file-&gt;zif_fm_file~append_row
+    EXPORTING
+      im_file_row = &apos;Test line 1&apos;.
+
+  CALL METHOD r_file-&gt;zif_fm_file~append_row
+    EXPORTING
+      im_file_row = &apos;Test line 2&apos;.
+
+  TRY.
+      CALL METHOD r_file-&gt;zif_fm_file~save.
+    CATCH cx_sy_file_open .
+    CATCH cx_sy_codepage_converter_init .
+    CATCH cx_sy_conversion_codepage .
+    CATCH cx_sy_file_authority .
+    CATCH cx_sy_file_io .
+    CATCH cx_sy_file_open_mode .
+    CATCH cx_sy_file_close .
+  ENDTRY.
+
+  MESSAGE &apos;File saved.&apos;(suc) TYPE &apos;S&apos;.</source>
+</PROG>
